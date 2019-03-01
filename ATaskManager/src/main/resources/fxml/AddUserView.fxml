@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ataskmanager.controllers.AddUserController">
+          <children>
+                    <Label style="-fx-background-color: #005cb2; -fx-text-fill: #eeeeee;" text="Add New User" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                              <font>
+                                        <Font name="Calibri" size="24.0" />
+                              </font>
+                              <padding>
+                                        <Insets left="10.0" />
+                              </padding>
+                              <effect>
+                                        <DropShadow height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                              </effect>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="25.0" layoutY="100.0" prefHeight="25.0" prefWidth="100.0" text="First Name:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="300.0" layoutY="100.0" prefHeight="25.0" prefWidth="100.0" text="Last Name:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="150.0" prefHeight="25.0" prefWidth="75.0" text="Location:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="324.0" layoutY="150.0" prefHeight="25.0" prefWidth="75.0" text="Role:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="161.0" layoutY="200.0" prefHeight="25.0" prefWidth="115.0" text="Username:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER" layoutY="270.0" prefHeight="20.0" prefWidth="600.0" text="* Typical Username: First Initial and Full Last Name">
+                              <font>
+                                        <Font name="System Italic" size="11.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER" layoutY="300.0" prefHeight="20.0" prefWidth="600.0" text="* Initial Password will be equal to Username." AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0">
+                              <font>
+                                        <Font name="System Italic" size="11.0" />
+                              </font>
+                    </Label>
+                    <TextField fx:id="firstName" layoutX="130.0" layoutY="100.0" prefWidth="150.0" />
+                    <TextField fx:id="lastName" layoutX="405.0" layoutY="100.0" prefWidth="150.0" />
+                    <ComboBox fx:id="locationBox" layoutX="130.0" layoutY="150.0" prefWidth="150.0" />
+                    <ComboBox fx:id="roleBox" layoutX="405.0" layoutY="150.0" prefWidth="150.0" />
+                    <TextField fx:id="username" layoutX="286.0" layoutY="200.0" prefWidth="150.0" />
+                    <Button layoutX="5.0" layoutY="350.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="290.0" style="-fx-background-color: #333333; -fx-text-fill: #1e88e5;" text="Cancel">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+                    <Button layoutX="305.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="25.0" prefWidth="290.0" style="-fx-background-color: #333333; -fx-text-fill: #1e88e5;" text="Add User">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+          </children>
+</AnchorPane>

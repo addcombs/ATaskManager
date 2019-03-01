@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="225.0" prefWidth="350.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ataskmanager.controllers.LoginController">
+          <children>
+                    <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="70.0" prefHeight="25.0" prefWidth="140.0" text="Login" textAlignment="RIGHT">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                              <padding>
+                                        <Insets right="5.0" />
+                              </padding>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="120.0" prefHeight="25.0" prefWidth="140.0" text="Password" textAlignment="RIGHT">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                              <padding>
+                                        <Insets right="5.0" />
+                              </padding>
+                    </Label>
+                    <TextField fx:id="username" layoutX="151.0" layoutY="70.0" prefHeight="30.0" prefWidth="150.0" promptText="Username">
+                              <font>
+                                        <Font name="Calibri" size="14.0" />
+                              </font>
+                    </TextField>
+                    <PasswordField fx:id="password" layoutX="151.0" layoutY="120.0" prefHeight="30.0" prefWidth="150.0" promptText="Password">
+                              <font>
+                                        <Font name="Calibri" size="14.0" />
+                              </font>
+                    </PasswordField>
+                    <Button fx:id="submitLogin" layoutX="10.0" layoutY="180.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="35.0" prefWidth="330.0" style="-fx-text-fill: #1e88e5; -fx-background-color: #333333;" text="Login" textFill="WHITE">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+                    <Label fx:id="message" alignment="CENTER" layoutX="10.0" layoutY="160.0" prefHeight="18.0" prefWidth="330.0" />
+                    <Label fx:id="loginTitle" layoutX="14.0" layoutY="14.0" style="-fx-background-color: #005cb2; -fx-text-fill: #eeeeee;"  text="Manager Login" AnchorPane.bottomAnchor="185.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                              <font>
+                                        <Font name="Calibri Bold" size="24.0" />
+                              </font>
+                              <opaqueInsets>
+                                        <Insets />
+                              </opaqueInsets>
+                              <padding>
+                                        <Insets left="10.0" />
+                              </padding>
+                              <effect>
+                                        <DropShadow height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                              </effect>
+                    </Label>
+          </children>
+</AnchorPane>

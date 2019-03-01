@@ -1,0 +1,194 @@
+#recipientLabel{
+    -fx-background-color: #222222;
+    -fx-wrap-text: true;
+    -fx-text-fill: #222222;
+    -fx-padding: 5px 10px 5px 10px;
+    -fx-background-radius: 10px 10px 1px 10px;
+    -fx-max-width: 200px;
+}
+
+#senderLabel{
+    -fx-background-color: #005cb2;
+    -fx-wrap-text: true;
+    -fx-text-fill: #dddddd;
+    -fx-padding: 5px 10px 5px 10px;
+    -fx-background-radius: 10px 10px 10px 1px;
+    -fx-max-width: 200px;
+}
+
+#chatText{
+    -fx-fill: #ffffff;
+    -fx-font-family: Calibri;
+    -fx-font-size:  12px;
+}
+
+#recipientAnchor{
+    -fx-alignment: center-right;
+    -fx-max-width: 230px;
+}
+
+#senderAnchor{
+    -fx-max-width: 230px;
+}
+
+#cardGridPane{
+    -fx-background-color: #eeeeee;
+    -fx-pref-height: 75px;
+    -fx-pref-width: 125px;
+    -fx-padding: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: #444444;
+    -fx-text-fill: #222222;
+}
+
+#cardGridPaneWarning{
+    -fx-background-color: #ffff96;
+    -fx-pref-height: 75px;
+    -fx-pref-width: 125px;
+    -fx-padding: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: #444444;
+}
+
+#cardGridPaneAlert{
+    -fx-background-color: #ffe1e1;
+    -fx-pref-height: 75px;
+    -fx-pref-width: 125px;
+    -fx-padding: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: #444444;
+}
+
+#unassignedFlowPane{
+    -fx-padding: 5px;
+    -fx-base: #eeeeee;
+}
+
+#scheduledFlowPane{
+    -fx-padding: 5px;
+    -fx-base: #eeeeee;
+}
+
+#pinTitle{
+    -fx-base: #dddddd;
+    -fx-collapsible: false;
+    -fx-graphic: url("../images/pin_18x18.png");
+    -fx-pref-height: 525px;
+}
+
+#locationTitledPane{
+    -fx-base: #dddddd;
+    -fx-pref-width:150px;
+    -fx-collapsible: false;
+    -fx-graphic: url("../images/sharp_city_black_18x18.png");
+    -fx-pref-height: 525px;
+}
+
+#messageButton{
+    -fx-graphic: url("../images/sharp_chat_black_18x18.png");
+}
+
+#buttonPin{
+    -fx-graphic: url("../images/pin_18x18.png");
+}
+
+#locationFlowPane{
+    -fx-orientation: vertical;
+}
+
+#workerFlowPane{
+    -fx-orientation: vertical;
+}
+
+#workerTitledPane{
+    -fx-base: #777777;
+    -fx-collapsible: false;
+    -fx-graphic: url("../images/sharp_person_black_18x18.png");
+}
+
+#chatTitledPane{
+    -fx-collapsible: false;
+    -fx-graphic: url("../images/sharp_chat_black_18x18.png");
+}
+
+#workerCountPane{
+    -fx-collapsible: false;
+}
+
+#cardGridPane {
+    -fx-pref-height: 75px;
+    -fx-pref-width: 125px;
+    -fx-background-color: #eeeeee;
+    -fx-padding: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color: #555555;
+    -fx-text-fill: #eeeeee;
+}
+
+#completedStatusLabel{
+    -fx-border-width: 1px;
+    -fx-border-color: #555555;
+    -fx-padding: 5px;
+    -fx-pref-width: 125px;
+    -fx-pref-height: 30px;
+    -fx-background-color: #6ab7ff;
+    -fx-text-fill: #222222;
+}
+
+#assignedStatusLabel{
+    -fx-border-width: 1px;
+    -fx-border-color: #555555;
+    -fx-padding: 5px;
+    -fx-pref-width: 125px;
+    -fx-pref-height: 30px;
+    -fx-background-color: #005cb2;
+    -fx-text-fill: #dddddd;
+}
+
+#highPriority{
+    -fx-background-color: rgba(202,89,89,1);
+    -fx-pref-width: 10px;
+    -fx-text-alignment: center;
+}
+
+#mediumPriority{
+    -fx-background-color: rgba(228,190,108,1);
+    -fx-pref-width: 10px;
+    -fx-text-alignment: center;
+}
+
+#lowPriority{
+    -fx-background-color: rgba(117,170,104,1);
+    -fx-pref-width: 10px;
+    -fx-text-alignment: center;
+}
+
+.root {
+    -fx-font-family: Calibri;
+    -fx-base: #999999;
+    -fx-focus-color: #005cb2;
+    -fx-accent: #1e88e5;
+    /* Light Color #6ab7ff */
+}
+
+.scroll-bar .increment-button {
+    -fx-padding: .5em;
+    -fx-background-color: #cccccc;
+}
+
+.scroll-bar .decrement-button {
+    -fx-padding: .5em;
+    -fx-background-color: #cccccc;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #555555;
+    -fx-text-fill: #000000;
+}
+
+.hyperlink {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-family: Calibri;
+    -fx-underline:  true;
+}

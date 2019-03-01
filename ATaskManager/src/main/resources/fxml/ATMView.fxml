@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.* ?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ataskmanager.controllers.MainController">
+          <children>
+      <ScrollPane fx:id="pinPane" fitToHeight="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefWidth="170.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="40.0">
+         <content>
+            <TitledPane fx:id="pinTitle" animated="false" collapsible="false" prefWidth="165.0">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font>
+               <content>
+                  <FlowPane fx:id="pinFlowPane" prefWidth="160.0" />
+               </content></TitledPane>
+         </content>
+      </ScrollPane>
+                    <ScrollPane fx:id="locationScroll" fitToHeight="true" layoutY="60.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="275.0" AnchorPane.topAnchor="40.0">
+                              <content>
+                                        <AnchorPane>
+                                                  <children>
+                                                             <HBox fx:id="locationsHBoxPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                  </children>
+                                        </AnchorPane>
+                              </content>
+                    </ScrollPane>
+                    <TabPane fx:id="bottomTabPane" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="275.0">
+                              <tabs>
+                                        <Tab text="Unassigned Tasks">
+                                                  <content>
+                                                            <ScrollPane fx:id="unassignedScrollPane" vbarPolicy="NEVER">
+                                                                      <content>
+                                                                                <FlowPane fx:id="unassignedFlowPane" orientation="VERTICAL" prefHeight="100.0" prefWidth="820.0" />
+                                                                      </content>
+                                                            </ScrollPane>
+                                                  </content>
+                                        </Tab>
+                                        <Tab text="Scheduled Tasks">
+                                                  <content>
+                                                            <ScrollPane fx:id="scheduledScrollPane" vbarPolicy="NEVER">
+                                                                      <content>
+                                                                                <FlowPane fx:id="scheduledFlowPane" orientation="VERTICAL" prefHeight="100.0" prefWidth="820.0" />
+                                                                      </content>
+                                                            </ScrollPane>
+                                                  </content>
+                                        </Tab>
+                              </tabs>
+                    </TabPane>
+                    <HBox prefHeight="50.0" prefWidth="150.0" spacing="20.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="945.0" AnchorPane.topAnchor="0.0">
+                              <children>
+                                        <ImageView fx:id="addUserIcon" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#addUser" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                            <Image url="@../images/sharp_account_circle_black_18dp.png" />
+                                                  </image>
+                                                  <HBox.margin>
+                                                            <Insets left="5.0" top="10.0" />
+                                                  </HBox.margin>
+                                                  <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                  </cursor>
+                                        </ImageView>
+                                        <ImageView fx:id="addLocationIcon" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#addLocation" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                            <Image url="@../images/sharp_location_city_black_18dp.png" />
+                                                  </image>
+                                                  <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                  </HBox.margin>
+                                                  <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                  </cursor>
+                                        </ImageView>
+                                        <ImageView fx:id="addTaskIcon" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#addTask" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                            <Image url="@../images/sharp_assignment_black_18dp.png" />
+                                                  </image>
+                                                  <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                  </HBox.margin>
+                                                  <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                  </cursor>
+                                        </ImageView>
+                              </children>
+                    </HBox>
+                    <Pane fx:id="userLabelPane" layoutX="675.0" prefHeight="50.0" prefWidth="90.0" AnchorPane.rightAnchor="275.0">
+                              <padding>
+                                        <Insets top="10.0" />
+                              </padding>
+                              <children>
+                                        <Label fx:id="userLabel" alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="-135.0" prefHeight="40.0" prefWidth="225.0" text="User">
+                                                  <font>
+                                                            <Font name="Calibri" size="24.0" />
+                                                  </font>
+                                        </Label>
+                              </children>
+                    </Pane>
+                    <AnchorPane fx:id="messagesPane" layoutX="830.0" prefHeight="650.0" prefWidth="270.0" style="-fx-border-color: #888888; -fx-border-width: 1px;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <children>
+                                        <TitledPane fx:id="chatTitledPane" alignment="BOTTOM_LEFT" collapsible="false" focusTraversable="false" layoutX="30.0" layoutY="10.0" prefHeight="325.0" prefWidth="227.0" AnchorPane.bottomAnchor="365.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0">
+                                                  <content>
+                                                            <ListView fx:id="chatList" focusTraversable="false" maxWidth="230.0" prefHeight="0.0" prefWidth="230.0" />
+                                                  </content>
+                                                  <font>
+                                                            <Font name="Calibri" size="12.0" />
+                                                  </font>
+                                        </TitledPane>
+                                        <TextArea fx:id="textMessage" disable="true" focusTraversable="false" layoutX="31.0" layoutY="351.0" maxWidth="230.0" prefHeight="102.0" prefWidth="230.0" wrapText="true" AnchorPane.bottomAnchor="255.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="5.0">
+                                                  <font>
+                                                            <Font name="Calibri" size="12.0" />
+                                                  </font></TextArea>
+                                        <Button fx:id="sendMessage" layoutX="31.0" layoutY="465.0" mnemonicParsing="false" onAction="#outgoingMessages" prefHeight="25.0" prefWidth="230.0" text="Send Message" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="5.0">
+                                                  <font>
+                                                            <Font name="Calibri" size="12.0" />
+                                                  </font>
+                                        </Button>
+                                        <Pane fx:id="messagePane" onMouseClicked="#toggleMessagePane" prefHeight="700.0" prefWidth="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="243.0" AnchorPane.topAnchor="0.0">
+                                                  <children>
+                                                            <ImageView fx:id="messageToggleRight" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" x="6.0" y="6.0">
+                                                                      <image>
+                                                                                <Image url="@../images/sharp_chevron_right_black_18dp.png" />
+                                                                      </image>
+                                                                      <cursor>
+                                                                                <Cursor fx:constant="HAND" />
+                                                                      </cursor>
+                                                            </ImageView>
+                                                            <Label fx:id="messagesLabel" layoutX="-27.0" layoutY="73.0" prefHeight="25.0" prefWidth="90.0" rotate="90.0" text="Messages">
+                                                                      <font>
+                                                                                <Font size="14.0" />
+                                                                      </font>
+                                                            </Label>
+                                                            <ImageView fx:id="messageToggleLeft" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" visible="false" x="6.0" y="6.0">
+                                                                      <cursor>
+                                                                                <Cursor fx:constant="HAND" />
+                                                                      </cursor>
+                                                                      <image>
+                                                                                <Image url="@../images/sharp_chevron_left_white_18dp.png" />
+                                                                      </image>
+                                                            </ImageView>
+                  <ImageView fx:id="notificationImage" fitHeight="18.0" fitWidth="18.0" layoutX="7.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../images/sharp_chat_black_filled_18x18.png" />
+                     </image>
+                  </ImageView>
+                                                            <Label fx:id="notificationLabel" alignment="CENTER" layoutX="2.0" layoutY="113.0" prefWidth="28.0" text="0" textFill="#6ab7ff" visible="false">
+                                                                      <font>
+                                                                                <Font name="Calibri Bold" size="11.0" />
+                                                                      </font>
+                                                            </Label>
+                                                  </children>
+                                                  <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                  </cursor>
+                                        </Pane>
+                                        <TableView fx:id="chatTable" focusTraversable="false" layoutX="31.0" layoutY="500.0" onMouseClicked="#chatSelect" prefHeight="188.0" prefWidth="230.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="5.0">
+                                                  <columns>
+                                                            <TableColumn fx:id="chatTableFirstName" maxWidth="102.0" prefWidth="102.0" text="First Name" />
+                                                            <TableColumn fx:id="chatTableLastName" maxWidth="122.0" prefWidth="122.0" resizable="false" text="Last Name" />
+                                                  </columns>
+                                        </TableView>
+                              </children>
+                    </AnchorPane>
+          </children>
+   <effect>
+      <BoxBlur height="10.0" width="10.0" />
+   </effect>
+</AnchorPane>

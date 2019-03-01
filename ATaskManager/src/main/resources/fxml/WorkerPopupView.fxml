@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ataskmanager.controllers.WorkerPopupController">
+          <children>
+                    <ScrollPane fx:id="scrollHistory" hbarPolicy="NEVER" layoutX="287.0" layoutY="81.0" minHeight="200.0" pannable="true" prefHeight="260.0" prefWidth="300.0" style="-fx-background-color: rgb(100,100,100);">
+                              <content>
+                                        <GridPane fx:id="archivedGrid" prefHeight="28.0" prefWidth="250.0">
+                                                  <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="61.0" minWidth="10.0" prefWidth="27.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="130.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="91.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                            <RowConstraints maxHeight="135.0" minHeight="0.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                        </GridPane>
+                              </content></ScrollPane>
+                    <Label layoutX="287.0" layoutY="58.0" prefHeight="17.0" prefWidth="300.0" text="Task History">
+                              <font>
+                                        <Font name="Calibri" size="14.0" />
+                              </font></Label>
+                    <Label layoutX="10.0" layoutY="10.0" style="-fx-background-color: #005cb2; -fx-text-fill: #eeeeee;" text="Worker Details" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                              <effect>
+                                        <DropShadow height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                              </effect>
+                              <font>
+                                        <Font name="Calibri" size="24.0" />
+                              </font>
+                              <padding>
+                                        <Insets left="10.0" />
+                              </padding>
+                    </Label>
+                    <Button fx:id="buttonDelete" layoutX="487.0" layoutY="352.0" mnemonicParsing="false" onAction="#deleteWorker" prefWidth="100.0" style="-fx-background-color: #333333; -fx-text-fill: #f44242;" text="Delete">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font></Button>
+                    <Button fx:id="buttonPin" layoutX="556.0" layoutY="13.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
+                    <Button fx:id="messageButton" layoutX="507.0" layoutY="13.0" mnemonicParsing="false" onAction="#addChat" prefHeight="30.0" prefWidth="30.0" />
+                    <Label fx:id="workerName" alignment="TOP_LEFT" layoutX="14.0" layoutY="63.0" prefHeight="28.0" prefWidth="249.0" text="Name" textAlignment="RIGHT" AnchorPane.leftAnchor="10.0">
+                              <font>
+                                        <Font name="Calibri" size="24.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutY="300.0" prefHeight="25.0" prefWidth="90.0" text="Username:" AnchorPane.leftAnchor="10.0">
+                              <font>
+                                        <Font name="Calibri Bold" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="21.0" layoutY="335.0" prefHeight="25.0" prefWidth="90.0" text="Location:" AnchorPane.leftAnchor="10.0">
+                              <font>
+                                        <Font name="Calibri Bold" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label fx:id="workerUsername" layoutX="105.0" layoutY="300.0" prefHeight="25.0" prefWidth="156.0" text="Username">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label fx:id="workerLocation" layoutX="105.0" layoutY="335.0" prefHeight="25.0" prefWidth="156.0" text="Location">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <ImageView fitHeight="173.0" fitWidth="200.0" layoutX="35.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                        <Image url="@../images/user-placeholder.png" />
+                              </image>
+                    </ImageView>
+          </children>
+</AnchorPane>

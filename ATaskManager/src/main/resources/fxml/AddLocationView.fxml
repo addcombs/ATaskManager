@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ataskmanager.controllers.AddLocationController">
+          <children>
+                    <Label layoutX="10.0" layoutY="10.0" style="-fx-background-color: #005cb2; -fx-text-fill: #eeeeee;" text="Add New Location" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                              <font>
+                                        <Font name="Calibri" size="24.0" />
+                              </font>
+                              <padding>
+                                        <Insets left="10.0" />
+                              </padding>
+                              <effect>
+                                        <DropShadow height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                              </effect>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="26.0" layoutY="100.0" prefHeight="25.0" prefWidth="100.0" text="Name:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="26.0" layoutY="200.0" prefHeight="25.0" prefWidth="100.0" text="City:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="26.0" layoutY="150.0" prefHeight="25.0" prefWidth="100.0" text="Address:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="281.0" layoutY="200.0" prefHeight="25.0" prefWidth="50.0" text="State:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="391.0" layoutY="200.0" prefHeight="25.0" prefWidth="35.0" text="Zip:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="331.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" text="Location Code:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <TextField fx:id="locationName" layoutX="131.0" layoutY="100.0" />
+                    <TextField fx:id="locationCode" layoutX="456.0" layoutY="100.0" prefHeight="25.0" prefWidth="50.0" />
+                    <TextField fx:id="address" layoutX="131.0" layoutY="150.0" prefWidth="375.0" />
+                    <TextField fx:id="city" layoutX="131.0" layoutY="200.0" />
+                    <ComboBox fx:id="state" layoutX="334.0" layoutY="200.0" prefHeight="25.0" prefWidth="60.0" />
+                    <TextField fx:id="zip" layoutX="431.0" layoutY="200.0" prefHeight="25.0" prefWidth="75.0" />
+                    <Button layoutX="10.0" layoutY="350.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="275.0" style="-fx-background-color: #333333; -fx-text-fill: #1e88e5;" text="Cancel">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+                    <Button layoutX="310.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="25.0" prefWidth="275.0" style="-fx-background-color: #333333; -fx-text-fill: #1e88e5;" text="Add Location">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+          </children>
+</AnchorPane>

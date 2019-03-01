@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ataskmanager.controllers.AddTaskController">
+          <children>
+                    <Label layoutX="5.0" layoutY="5.0" style="-fx-background-color: #005cb2; -fx-text-fill: #eeeeee;" text="Add New Task" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                              <font>
+                                        <Font name="Calibri" size="24.0" />
+                              </font>
+                              <padding>
+                                        <Insets left="10.0" />
+                              </padding>
+                              <effect>
+                                        <DropShadow height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                              </effect>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="75.0" prefHeight="25.0" prefWidth="115.0" text="Requested by:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="115.0" prefHeight="25.0" prefWidth="115.0" text="Assign to:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="155.0" prefHeight="25.0" prefWidth="115.0" text="Subject:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="300.0" layoutY="75.0" prefHeight="25.0" prefWidth="115.0" text="Task Location:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="300.0" layoutY="115.0" prefHeight="25.0" prefWidth="115.0" text="Priority Level:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="295.0" prefHeight="25.0" prefWidth="115.0" text="Due:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label layoutX="20.0" layoutY="235.0" prefHeight="25.0" prefWidth="139.0" text="Task Description">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="195.0" prefHeight="25.0" prefWidth="115.0" text="Due Date:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="300.0" layoutY="195.0" prefHeight="25.0" prefWidth="115.0" text="Due Time:">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER" layoutX="485.0" layoutY="195.0" prefHeight="25.0" prefWidth="20.0" text=":">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font></Label>
+                    <ComboBox fx:id="requestedBy" layoutX="140.0" layoutY="75.0" prefWidth="150.0" />
+                    <ComboBox fx:id="taskLocation" layoutX="420.0" layoutY="75.0" prefWidth="150.0" />
+                    <ComboBox fx:id="assignedTo" layoutX="140.0" layoutY="115.0" prefWidth="150.0" />
+                    <ComboBox fx:id="priorityLevel" layoutX="420.0" layoutY="115.0" prefWidth="150.0" />
+                    <TextField fx:id="subject" layoutX="141.0" layoutY="155.0" prefWidth="150.0" />
+      <DatePicker fx:id="scheduledDate" layoutX="421.0" layoutY="155.0" prefWidth="150.0" />
+                    <DatePicker fx:id="dueDate" layoutX="141.0" layoutY="195.0" prefWidth="150.0" />
+                    <ComboBox fx:id="dueHour" layoutX="420.0" layoutY="195.0" prefHeight="25.0" prefWidth="65.0" />
+                    <ComboBox fx:id="dueMinute" layoutX="505.0" layoutY="195.0" prefHeight="25.0" prefWidth="65.0" />
+                    <TextArea fx:id="description" layoutX="20.0" layoutY="260.0" prefHeight="80.0" prefWidth="560.0" />
+                    <Button layoutX="5.0" layoutY="350.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="290.0" style="-fx-background-color: #333333; -fx-text-fill: #1e88e5;" text="Cancel">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+                    <Button fx:id="submitButton" layoutX="305.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="25.0" prefWidth="290.0" style="-fx-background-color: #333333; -fx-text-fill: #1e88e5;" text="Add Task">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+      <Label alignment="CENTER_RIGHT" layoutX="300.0" layoutY="155.0" prefHeight="25.0" prefWidth="115.0" text="Scheduled Date:">
+         <font>
+            <Font name="Calibri" size="17.0" />
+         </font>
+      </Label>
+          </children>
+</AnchorPane>

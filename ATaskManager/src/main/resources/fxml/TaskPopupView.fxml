@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ataskmanager.controllers.TaskPopupController">
+          <children>
+                    <Label layoutX="55.0" layoutY="34.0" text="ID" />
+                    <Label layoutX="20.0" layoutY="20.0" style="-fx-background-color: #005cb2; -fx-text-fill: #eeeeee;" text="Task Details" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                              <effect>
+                                        <DropShadow height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                              </effect>
+                              <font>
+                                        <Font name="Calibri" size="24.0" />
+                              </font>
+                              <padding>
+                                        <Insets left="10.0" />
+                              </padding>
+                    </Label>
+                    <Button fx:id="buttonReassign" layoutX="25.0" layoutY="350.0" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #333333; -fx-text-fill: #1e88e5;" text="Re-open">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+                    <Button fx:id="buttonComplete" layoutX="175.0" layoutY="350.0" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #333333; -fx-text-fill: #1e88e5;" text="Complete">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+                    <Button fx:id="buttonCache" layoutX="325.0" layoutY="350.0" mnemonicParsing="false" onAction="#archiveTask" prefWidth="100.0" style="-fx-background-color: #333333; -fx-text-fill: #1e88e5;" text="Archive">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+                    <Button fx:id="buttonDelete" layoutX="475.0" layoutY="350.0" mnemonicParsing="false" onAction="#deleteTask" prefWidth="100.0" style="-fx-text-fill: #f44242; -fx-background-color: #333333;" text="Delete">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Button>
+                    <Label fx:id="taskAssignee" layoutX="135.0" layoutY="100.0" prefHeight="25.0" text="Assignee">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label fx:id="taskRequestee" layoutX="435.0" layoutY="100.0" prefHeight="25.0" text="Requestee">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label fx:id="taskStatus" layoutX="135.0" layoutY="125.0" prefHeight="25.0" text="Status">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label fx:id="taskLocation" layoutX="435.0" layoutY="125.0" prefHeight="25.0" text="Location">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label fx:id="taskDueDate" layoutX="135.0" layoutY="150.0" prefHeight="25.0" text="Due Date">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label fx:id="taskPriority" layoutX="435.0" layoutY="150.0" prefHeight="25.0" text="Priority">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label fx:id="taskSubject" layoutX="100.0" layoutY="65.0" text="Short Subject">
+                              <font>
+                                        <Font name="Calibri" size="24.0" />
+                              </font>
+                    </Label>
+                    <Label fx:id="taskDescription" alignment="TOP_LEFT" layoutX="25.0" layoutY="229.0" prefHeight="100.0" prefWidth="550.0" text="Long Description" wrapText="true">
+                              <font>
+                                        <Font name="Calibri" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="25.0" layoutY="100.0" prefHeight="25.0" prefWidth="100.0" styleClass="#taskDetailsLabels" text="Assigned To:">
+                              <font>
+                                        <Font name="Calibri Bold" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="25.0" layoutY="150.0" prefHeight="25.0" prefWidth="100.0" styleClass="#taskDetailsLabels" text="Due Date:">
+                              <font>
+                                        <Font name="Calibri Bold" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="275.0" layoutY="100.0" prefHeight="25.0" prefWidth="150.0" styleClass="#taskDetailsLabels" text="Requested By:">
+                              <font>
+                                        <Font name="Calibri Bold" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="275.0" layoutY="125.0" prefHeight="25.0" prefWidth="150.0" styleClass="#taskDetailsLabels" text="Location:">
+                              <font>
+                                        <Font name="Calibri Bold" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="275.0" layoutY="150.0" prefHeight="25.0" prefWidth="150.0" styleClass="#taskDetailsLabels" text="Priority:">
+                              <font>
+                                        <Font name="Calibri Bold" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label layoutX="24.0" layoutY="200.0" prefHeight="22.0" prefWidth="150.0" styleClass="#taskDetailsLabels" text="Task Description:">
+                              <font>
+                                        <Font name="Calibri Bold" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label alignment="CENTER_RIGHT" layoutX="25.0" layoutY="125.0" prefHeight="25.0" prefWidth="100.0" styleClass="#taskDetailsLabels" text="Status:">
+                              <font>
+                                        <Font name="Calibri Bold" size="18.0" />
+                              </font>
+                    </Label>
+                    <Label layoutX="11.0" layoutY="65.0" styleClass="#taskSubjectLabel" text="Subject:">
+                              <font>
+                                        <Font name="Calibri Bold" size="24.0" />
+                              </font>
+                    </Label>
+          </children>
+</AnchorPane>

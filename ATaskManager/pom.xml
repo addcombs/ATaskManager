@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+          <modelVersion>4.0.0</modelVersion>
+          <groupId>ATaskManager</groupId>
+          <artifactId>a-task-manager</artifactId>
+          <version>1.0-SNAPSHOT</version>
+          <!--<packaging>jar</packaging>-->
+
+          <dependencies>
+
+                    <!--SQL-->
+                    <dependency>
+                              <groupId>mysql</groupId>
+                              <artifactId>mysql-connector-java</artifactId>
+                              <version>8.0.13</version>
+                    </dependency>
+                    <dependency>
+                              <groupId>org.hibernate</groupId>
+                              <artifactId>hibernate-core</artifactId>
+                              <version>5.3.7.Final</version>
+                    </dependency>
+
+                    <!--Open JavaFX-->
+                    <dependency>
+                              <groupId>org.openjfx</groupId>
+                              <artifactId>javafx-controls</artifactId>
+                              <version>11</version>
+                    </dependency>
+                    <dependency>
+                              <groupId>org.openjfx</groupId>
+                              <artifactId>javafx-fxml</artifactId>
+                              <version>11</version>
+                    </dependency>
+
+                    <!--Active MQ-->
+                    <dependency>
+                              <groupId>javax.jms</groupId>
+                              <artifactId>javax.jms-api</artifactId>
+                              <version>2.0.1</version>
+                    </dependency>
+                    <dependency>
+                              <groupId>org.apache.activemq</groupId>
+                              <artifactId>activemq-all</artifactId>
+                              <version>5.15.7</version>
+                    </dependency>
+                    <dependency>
+                              <groupId>javax.xml.bind</groupId>
+                              <artifactId>jaxb-api</artifactId>
+                              <version>2.3.1</version>
+                    </dependency>
+                    <dependency>
+                              <groupId>org.eclipse.paho</groupId>
+                              <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+                              <version>1.2.0</version>
+                    </dependency>
+                    <dependency>
+                              <groupId>org.hibernate</groupId>
+                              <artifactId>hibernate-c3p0</artifactId>
+                              <version>5.4.0.Final</version>
+                    </dependency>
+                    <dependency>
+                              <groupId>c3p0</groupId>
+                              <artifactId>c3p0</artifactId>
+                              <version>0.9.1.2</version>
+                    </dependency>
+
+          </dependencies>
+
+          <properties>
+                    <jdk.version>11</jdk.version>
+                    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+          </properties>
+
+          <build>
+                    <plugins>
+                              <plugin>
+                                        <groupId>org.apache.maven.plugins</groupId>
+                                        <artifactId>maven-compiler-plugin</artifactId>
+                                        <version>3.8.0</version>
+                                        <configuration>
+                                                  <release>11</release>
+                                        </configuration>
+                              </plugin>
+                              <plugin>
+                                        <groupId>com.akathist.maven.plugins.launch4j</groupId>
+                                        <artifactId>launch4j-maven-plugin</artifactId>
+                                        <version>1.7.24</version>
+                                        <executions>
+                                                  <execution>
+                                                            <id>atm-l4j</id>
+                                                            <phase>install</phase>
+                                                            <goals>
+                                                                      <goal>launch4j</goal>
+                                                            </goals>
+                                                            <configuration>
+                                                                      <headerType>gui</headerType>
+                                                                      <outfile>target/ATaskManager.exe</outfile>
+                                                                      <jar>target/a-task-manager-1.0-SNAPSHOT-jar-with-dependencies.jar</jar>
+                                                                      <errTitle>ATaskManager</errTitle>
+                                                                      <icon>src/main/resources/images/atm_icon1.ico</icon>
+                                                                      <classPath>
+                                                                                <mainClass>com.ataskmanager.ATaskManager</mainClass>
+                                                                                <preCp>anything</preCp>
+                                                                      </classPath>
+                                                                      <jre>
+                                                                                <path>classes/jdk-11.0.1</path>
+                                                                                <opts>
+                                                                                          <opt>--module-path="classes/javafx-sdk-11.0.1/lib" --add-modules=javafx.controls,javafx.fxml</opt>
+                                                                                </opts>
+                                                                      </jre>
+                                                                      <splash>
+                                                                                <file>src/main/resources/images/ATMsplash.bmp</file>
+                                                                                <waitForWindow>true</waitForWindow>
+                                                                                <timeout>60</timeout>
+                                                                                <timeoutErr>true</timeoutErr>
+                                                                      </splash>
+                                                                      <versionInfo>
+                                                                                <fileVersion>1.0.0.0</fileVersion>
+                                                                                <txtFileVersion>One</txtFileVersion>
+                                                                                <fileDescription>Task Manager 1.0</fileDescription>
+                                                                                <copyright>A Duie Pyle</copyright>
+                                                                                <productVersion>1.0.0.0</productVersion>
+                                                                                <txtProductVersion>One</txtProductVersion>
+                                                                                <productName>Task Manager 1.0</productName>
+                                                                                <companyName></companyName>
+                                                                                <internalName>ATM</internalName>
+                                                                                <originalFilename>TaskManager.exe</originalFilename>
+                                                                                <trademarks></trademarks>
+                                                                                <language>ENGLISH_US</language>
+                                                                      </versionInfo>
+
+                                                            </configuration>
+                                                  </execution>
+                                        </executions>
+                              </plugin>
+                              <plugin>
+                                        <artifactId>maven-assembly-plugin</artifactId>
+                                        <configuration>
+                                                  <archive>
+                                                            <manifest>
+                                                                      <mainClass>com.ataskmanager.ATaskManager</mainClass>
+                                                            </manifest>
+                                                  </archive>
+                                                  <descriptorRefs>
+                                                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                                                  </descriptorRefs>
+                                        </configuration>
+                                        <executions>
+                                                  <execution>
+                                                            <goals>
+                                                                      <goal>single</goal>
+                                                            </goals>
+                                                  </execution>
+                                        </executions>
+                              </plugin>
+                              <plugin>
+                                        <groupId>org.codehaus.mojo</groupId>
+                                        <artifactId>exec-maven-plugin</artifactId>
+                                        <version>1.6.0</version>
+                                        <executions>
+                                                  <execution>
+                                                            <goals>
+                                                                      <goal>java</goal>
+                                                            </goals>
+                                                  </execution>
+                                        </executions>
+                                        <configuration>
+                                                  <mainClass>com.ataskmanager.ATaskManager</mainClass>
+                                        </configuration>
+                              </plugin>
+                    </plugins>
+          </build>
+</project>
